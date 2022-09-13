@@ -7,7 +7,7 @@
   <ng-container
     *ngFor="let column of columns; let i = index"
     [matColumnDef]="column.field"
-    [sticky]="true"
+    [sticky]="i < freeze"
   >
     <th mat-header-cell *matHeaderCellDef>
       {{ column.field }}

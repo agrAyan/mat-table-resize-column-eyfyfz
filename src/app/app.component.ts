@@ -18,6 +18,14 @@ export interface PeriodicElement {
   position2: number;
   weight2: number;
   symbol2: string;
+  name3: string;
+  position3: number;
+  weight3: number;
+  symbol3: string;
+  name4: string;
+  position4: number;
+  weight4: number;
+  symbol4: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
@@ -30,6 +38,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
     name2: 'Hydrogen',
     weight2: 1.0079,
     symbol2: 'H',
+    position3: 1,
+    name3: 'Hydrogen',
+    weight3: 1.0079,
+    symbol3: 'H',
+    position4: 1,
+    name4: 'Hydrogen',
+    weight4: 1.0079,
+    symbol4: 'H',
   },
   {
     position: 1,
@@ -40,6 +56,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
     name2: 'Hydrogen',
     weight2: 1.0079,
     symbol2: 'H',
+    position3: 1,
+    name3: 'Hydrogen',
+    weight3: 1.0079,
+    symbol3: 'H',
+    position4: 1,
+    name4: 'Hydrogen',
+    weight4: 1.0079,
+    symbol4: 'H',
   },
   {
     position: 1,
@@ -50,6 +74,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
     name2: 'Hydrogen',
     weight2: 1.0079,
     symbol2: 'H',
+    position3: 1,
+    name3: 'Hydrogen',
+    weight3: 1.0079,
+    symbol3: 'H',
+    position4: 1,
+    name4: 'Hydrogen',
+    weight4: 1.0079,
+    symbol4: 'H',
   },
   {
     position: 1,
@@ -60,6 +92,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
     name2: 'Hydrogen',
     weight2: 1.0079,
     symbol2: 'H',
+    position3: 1,
+    name3: 'Hydrogen',
+    weight3: 1.0079,
+    symbol3: 'H',
+    position4: 1,
+    name4: 'Hydrogen',
+    weight4: 1.0079,
+    symbol4: 'H',
   },
   {
     position: 1,
@@ -70,26 +110,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
     name2: 'Hydrogen',
     weight2: 1.0079,
     symbol2: 'H',
-  },
-  {
-    position: 1,
-    name: 'Hydrogen',
-    weight: 1.0079,
-    symbol: 'H',
-    position2: 1,
-    name2: 'Hydrogen',
-    weight2: 1.0079,
-    symbol2: 'H',
-  },
-  {
-    position: 1,
-    name: 'Hydrogen',
-    weight: 1.0079,
-    symbol: 'H',
-    position2: 1,
-    name2: 'Hydrogen',
-    weight2: 1.0079,
-    symbol2: 'H',
+    position3: 1,
+    name3: 'Hydrogen',
+    weight3: 1.0079,
+    symbol3: 'H',
+    position4: 1,
+    name4: 'Hydrogen',
+    weight4: 1.0079,
+    symbol4: 'H',
   },
 ];
 
@@ -111,6 +139,14 @@ export class AppComponent implements OnInit, AfterViewInit {
     { field: 'name2', width: 20 },
     { field: 'weight2', width: 20 },
     { field: 'symbol2', width: 20 },
+    { field: 'position3', width: 20 },
+    { field: 'name3', width: 20 },
+    { field: 'weight3', width: 20 },
+    { field: 'symbol3', width: 20 },
+    { field: 'position4', width: 20 },
+    { field: 'name4', width: 20 },
+    { field: 'weight4', width: 20 },
+    { field: 'symbol4', width: 20 },
   ];
   displayedColumns: string[] = [];
   dataSource = ELEMENT_DATA;
@@ -122,7 +158,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   isResizingRight: boolean;
   resizableMousemove: () => void;
   resizableMouseup: () => void;
-
+   freeze=2;
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
