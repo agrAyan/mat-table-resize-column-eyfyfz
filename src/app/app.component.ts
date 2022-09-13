@@ -131,7 +131,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild(MatTable, { read: ElementRef }) private matTableRef: ElementRef;
 
   columns: any[] = [
-    { field: 'position', width: 20 },
+    { field: 'position', width: 40 },
     { field: 'name', width: 20 },
     { field: 'weight', width: 20 },
     { field: 'symbol', width: 20 },
@@ -158,7 +158,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   isResizingRight: boolean;
   resizableMousemove: () => void;
   resizableMouseup: () => void;
-   freeze=2;
+  freeze = 2;
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
